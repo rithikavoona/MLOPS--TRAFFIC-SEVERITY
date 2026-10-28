@@ -1,0 +1,36 @@
+name: roadscope
+services:
+  dashboard:
+    image: roadscope:local
+    build: .
+    restart: unless-stopped
+    ports: ["127.0.0.1:8501:8501"]
+    environment:
+      TRAFFIC_API_URL: http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy
+    volumes:
+      - ./data/processed:/opt/traffic/data/processed:ro
+      - ./models:/opt/traffic/models:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; assert urllib.request.urlopen('http://127.0.0.1:8501/_stcore/health', timeout=5).read().strip() == b'ok'"]
+      interval: 15s
+      timeout: 10s
+      retries: 6
+      start_period: 40s
+  api:
+    image: roadscope:local
+    build: .
+    restart: unless-stopped
+    command: uvicorn src.api:app --host 0.0.0.0 --port 8000
+    ports: ["127.0.0.1:8000:8000"]
+    volumes:
+      - ./models:/opt/traffic/models:ro
+      - ./logs:/opt/traffic/logs
+    healthcheck:
+      test: ["CMD", "python", "-c", "import json, urllib.request; assert json.load(urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=5))['status'] == 'ready'"]
+      interval: 15s
+      timeout: 10s
+      retries: 6
+      start_period: 40s

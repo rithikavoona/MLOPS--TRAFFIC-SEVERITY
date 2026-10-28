@@ -1,0 +1,37 @@
+{
+  "audited_at_utc": "2026-10-15T16:18:00.738486+00:00",
+  "artifact_checks": {
+    "required_files_present": true,
+    "raw_checksums_match": true,
+    "accepted_rejected_reconcile": true,
+    "warehouse_integrity": true,
+    "required_dimensions": true,
+    "required_aggregates": true,
+    "aggregate_counts_reconcile": true,
+    "evaluated_model_data_hash_matches": true,
+    "registered_model_ready": true
+  },
+  "missing_files": [],
+  "registered_versions": [
+    [
+      "traffic-severity",
+      1,
+      "READY"
+    ]
+  ],
+  "external_weather_matches": 0,
+  "runtime_availability": {
+    "docker_command": "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.EXE",
+    "airflow_package": false
+  },
+  "docker_verification": {
+    "success": true,
+    "verified_at_utc": "2026-10-15T16:17:47.502921+00:00"
+  },
+  "remaining_requirements": [
+    "Compatible GB weather and demonstrated valid spatial/time enrichment",
+    "Airflow scheduler/worker run evidence if required",
+    "Instructor approval for SQLite alternative",
+    "Student authorship/attribution and separate Part 1 submission confirmation"
+  ]
+}

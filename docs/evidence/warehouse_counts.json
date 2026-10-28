@@ -1,0 +1,15 @@
+{
+  "agg_day": 1826,
+  "agg_hour": 24,
+  "agg_road": 6,
+  "agg_weather": 9,
+  "agg_weekday_number": 7,
+  "dim_date": 1826,
+  "dim_location": 736,
+  "dim_road": 6,
+  "dim_severity": 3,
+  "dim_weather": 10,
+  "fact_casualty": 652763,
+  "fact_collision": 513748,
+  "fact_vehicle": 937164
+}

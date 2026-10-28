@@ -1,0 +1,33 @@
+{
+  "verified_at_utc": "2026-10-16T05:45:57.908617+00:00",
+  "success": true,
+  "dashboard": {
+    "success_message": [
+      "Predicted severity: Slight",
+      "Last successful ETL: 2026-10-13T14:11:13.395721+00:00"
+    ],
+    "api_caption": [
+      "Prediction served by API \u00b7 Model version: 20261013T081416Z"
+    ]
+  },
+  "new_api_requests": [
+    {
+      "timestamp_utc": "2026-10-16T05:45:02.107802+00:00",
+      "status_code": 200,
+      "status": "success",
+      "latency_ms": 2945.2310760002547
+    },
+    {
+      "timestamp_utc": "2026-10-16T05:45:02.193392+00:00",
+      "status_code": 422,
+      "status": "failed",
+      "latency_ms": 35.71593300011955
+    },
+    {
+      "timestamp_utc": "2026-10-16T05:45:53.893506+00:00",
+      "status_code": 200,
+      "status": "success",
+      "latency_ms": 1187.4550859997726
+    }
+  ]
+}

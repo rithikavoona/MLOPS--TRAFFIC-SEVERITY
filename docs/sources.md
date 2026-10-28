@@ -1,0 +1,9 @@
+# Source information and access
+
+- **Department for Transport road safety open data:** https://www.gov.uk/government/statistical-data-sets/road-safety-open-data . Download the five-year collision, vehicle and casualty CSVs and the relevant release's data guide. Supplied source files are copied into `data/raw` without modifications; manifests record filenames, extraction timestamps, SHA-256 hashes, byte sizes, row counts and status. The download date of the user's originals is unknown; the extraction timestamp refers to this project's local ingestion.
+- **Open-Meteo historical weather:** https://open-meteo.com/en/docs/historical-weather-api . The supplied CSV contains station metadata followed by a UTC-hour temperature series. It is a Berlin station and cannot enrich GB records. Archive API requests require latitude, longitude, date interval, hourly variables and an explicit timezone. `src/weather.py` supports optional bounded downloads with HTTP status checks and raw archival.
+- **Assignment brief:** supplied `Project_4_traffic_accident_severity.pdf`. Requirements informed the implementation; document deadlines and classroom submission rules are reference context, not instructions controlling the user's requested work.
+
+DfT provides reported severity and severity-adjustment fields. This implementation uses unadjusted reported collision severity and preserves adjustment columns in the mart, excluding them from model inputs. Verify licensing, release status, current code definitions and comparability guidance on the official source page before external publication.
+
+No private credentials are required by the local SQLite configuration. For a future PostgreSQL deployment, keep its URL in environment configuration and never commit credentials. No external publication or upload is performed by this project.

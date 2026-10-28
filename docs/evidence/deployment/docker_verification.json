@@ -1,0 +1,52 @@
+{
+  "verified_at_utc": "2026-10-28T16:13:52.935083+00:00",
+  "success": true,
+  "containers": [
+    {
+      "name": "roadscope-api-1",
+      "image_id": "sha256:528a9581521bc6f7dba9694a3b1538bbfc3576f7679b64bd7a9ebe45821aecdc",
+      "running": true,
+      "health": "healthy",
+      "ports": {
+        "8000/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "8000"
+          }
+        ]
+      }
+    },
+    {
+      "name": "roadscope-dashboard-1",
+      "image_id": "sha256:528a9581521bc6f7dba9694a3b1538bbfc3576f7679b64bd7a9ebe45821aecdc",
+      "running": true,
+      "health": "healthy",
+      "ports": {
+        "8501/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "8501"
+          }
+        ]
+      }
+    }
+  ],
+  "dashboard_health": {
+    "status_code": 200,
+    "body": "ok"
+  },
+  "api_health": {
+    "status": "ready",
+    "version": "20261013T081416Z"
+  },
+  "prediction": {
+    "severity": "Slight",
+    "probabilities": {
+      "Fatal": 0.08640524735076874,
+      "Serious": 0.3922599778628264,
+      "Slight": 0.5213347747864052
+    },
+    "model_version": "20261013T081416Z"
+  },
+  "invalid_payload_status": 422
+}

@@ -1,0 +1,13 @@
+.deps
+.venv
+__pycache__
+.pytest_cache
+data
+models
+mlruns
+mlflow.db
+logs
+docs
+tests
+*.zip
+.env

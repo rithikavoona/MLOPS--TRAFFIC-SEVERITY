@@ -1,0 +1,2 @@
+# Use the versions exercised by the ETL, model and dashboard verification.
+-r requirements-verified.txt
